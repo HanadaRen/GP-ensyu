@@ -1,0 +1,17 @@
+this.close(); //フォーム閉じる
+
+
+遷移先 適当な名前 = new 遷移先();
+            適当な名前.Show();
+
+Form2 f2 = new Form2();
+            f2.Show();
+
+
+ Application.Exit();　//システム自体を閉じる
+
+this.Close(); //今のフォームを閉じる
+
+this.Visible = false;　//非表示
+
+任意のフォームを定義したもの.Visible = true;　//表示する

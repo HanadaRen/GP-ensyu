@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Gp_app
 {
-    public partial class Form3 : Form
+    public partial class dialog : Form
     {
-        public Form3()
+        public dialog()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

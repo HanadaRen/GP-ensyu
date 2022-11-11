@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_app
 {
-    partial class Form2
+    partial class creation_account
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,6 @@ namespace Gp_app
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 22);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -96,7 +95,6 @@ namespace Gp_app
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -167,7 +165,6 @@ namespace Gp_app
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 12;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -285,7 +282,6 @@ namespace Gp_app
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "登録画面";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

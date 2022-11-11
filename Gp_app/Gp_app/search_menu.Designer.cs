@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_app
 {
-    partial class Form3
+    partial class search_menu
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,7 @@ namespace Gp_app
             this.button2.TabIndex = 43;
             this.button2.Text = "検索";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox4
             // 
@@ -251,8 +252,9 @@ namespace Gp_app
             this.button1.TabIndex = 22;
             this.button1.Text = "戻る";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form3
+            // search_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,7 +281,7 @@ namespace Gp_app
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form3";
+            this.Name = "search_menu";
             this.Text = "検索画面";
             this.ResumeLayout(false);
             this.PerformLayout();

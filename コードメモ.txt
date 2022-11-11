@@ -15,3 +15,5 @@ this.Close(); //今のフォームを閉じる
 this.Visible = false;　//非表示
 
 任意のフォームを定義したもの.Visible = true;　//表示する
+
+任意のフォームを定義したもの.ShowDialog; //ダイアログ表示

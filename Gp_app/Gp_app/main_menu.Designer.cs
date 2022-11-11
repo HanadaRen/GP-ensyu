@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_app
 {
-    partial class Form1
+    partial class main_menu
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -64,7 +64,7 @@ namespace Gp_app
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,9 +72,8 @@ namespace Gp_app
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "main_menu";
             this.Text = "メインメニュー";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -10,34 +10,31 @@ using System.Windows.Forms;
 
 namespace Gp_app
 {
-    public partial class Form1 : Form
+    public partial class main_menu : Form
     {
-        public Form1()
+        public main_menu()
         {
             InitializeComponent();
-            
-
         }
-        private void Form1_Load(object sender, EventArgs e)//フォーム画面
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)//登録画面移動ボタン
         {
-            Form2 f2 = new Form2();//Form2をf2と定義
+            creation_account f2 = new creation_account();//Form2をf2と定義
             f2.Show();//Form2を呼び出す
             this.Visible = false;//Form1を非表示
         }
-
-        private void button2_Click(object sender, EventArgs e)//検索画面ボタン
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)//終了ボタン
         {
-            Application.Exit();//終了
+            dialog f4 = new dialog();//Foem4をf4と定義
+            f4.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            search_menu sm = new search_menu();
+
+            sm.Show();
+
+            this.Visible = false;
         }
     }
 }

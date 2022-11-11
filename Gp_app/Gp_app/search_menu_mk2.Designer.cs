@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_app
 {
-    partial class search_menu
+    partial class search_menu_mk2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Gp_app
         /// </summary>
         private void InitializeComponent()
         {
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -54,15 +53,9 @@ namespace Gp_app
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(208, 409);
+            this.button2.Location = new System.Drawing.Point(207, 408);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 29);
             this.button2.TabIndex = 43;
@@ -73,7 +66,7 @@ namespace Gp_app
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(110, 357);
+            this.comboBox4.Location = new System.Drawing.Point(109, 356);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(229, 23);
             this.comboBox4.TabIndex = 42;
@@ -81,7 +74,7 @@ namespace Gp_app
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(110, 270);
+            this.comboBox3.Location = new System.Drawing.Point(109, 269);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 23);
             this.comboBox3.TabIndex = 41;
@@ -89,7 +82,7 @@ namespace Gp_app
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(110, 229);
+            this.comboBox2.Location = new System.Drawing.Point(109, 228);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 23);
             this.comboBox2.TabIndex = 40;
@@ -97,7 +90,7 @@ namespace Gp_app
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 186);
+            this.comboBox1.Location = new System.Drawing.Point(109, 185);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 23);
             this.comboBox1.TabIndex = 39;
@@ -105,7 +98,7 @@ namespace Gp_app
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(208, 144);
+            this.radioButton3.Location = new System.Drawing.Point(207, 143);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(58, 19);
             this.radioButton3.TabIndex = 38;
@@ -116,7 +109,7 @@ namespace Gp_app
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(159, 144);
+            this.radioButton2.Location = new System.Drawing.Point(158, 143);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(43, 19);
             this.radioButton2.TabIndex = 37;
@@ -127,7 +120,7 @@ namespace Gp_app
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(110, 144);
+            this.radioButton1.Location = new System.Drawing.Point(109, 143);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(43, 19);
             this.radioButton1.TabIndex = 36;
@@ -137,14 +130,14 @@ namespace Gp_app
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(110, 315);
+            this.textBox4.Location = new System.Drawing.Point(109, 314);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 22);
             this.textBox4.TabIndex = 35;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 98);
+            this.textBox3.Location = new System.Drawing.Point(109, 97);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 34;
@@ -152,7 +145,7 @@ namespace Gp_app
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 360);
+            this.label9.Location = new System.Drawing.Point(12, 359);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 33;
@@ -161,7 +154,7 @@ namespace Gp_app
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 318);
+            this.label8.Location = new System.Drawing.Point(12, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 15);
             this.label8.TabIndex = 32;
@@ -170,7 +163,7 @@ namespace Gp_app
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 273);
+            this.label7.Location = new System.Drawing.Point(12, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 15);
             this.label7.TabIndex = 31;
@@ -179,7 +172,7 @@ namespace Gp_app
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 232);
+            this.label6.Location = new System.Drawing.Point(12, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 30;
@@ -188,7 +181,7 @@ namespace Gp_app
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 189);
+            this.label5.Location = new System.Drawing.Point(12, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 15);
             this.label5.TabIndex = 29;
@@ -197,7 +190,7 @@ namespace Gp_app
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 146);
+            this.label4.Location = new System.Drawing.Point(12, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 28;
@@ -206,7 +199,7 @@ namespace Gp_app
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 101);
+            this.label3.Location = new System.Drawing.Point(12, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 27;
@@ -214,7 +207,7 @@ namespace Gp_app
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 55);
+            this.textBox2.Location = new System.Drawing.Point(109, 54);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 26;
@@ -222,7 +215,7 @@ namespace Gp_app
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 58);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 15);
             this.label2.TabIndex = 25;
@@ -231,7 +224,7 @@ namespace Gp_app
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 24;
@@ -239,14 +232,14 @@ namespace Gp_app
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 12);
+            this.textBox1.Location = new System.Drawing.Point(109, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 22);
             this.textBox1.TabIndex = 23;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(98, 409);
+            this.button1.Location = new System.Drawing.Point(97, 408);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 29);
             this.button1.TabIndex = 22;
@@ -254,11 +247,11 @@ namespace Gp_app
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // search_menu
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 450);
+            this.ClientSize = new System.Drawing.Size(353, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -281,7 +274,7 @@ namespace Gp_app
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "search_menu";
+            this.Name = "Form1";
             this.Text = "検索画面";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,7 +283,6 @@ namespace Gp_app
 
         #endregion
 
-        private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;

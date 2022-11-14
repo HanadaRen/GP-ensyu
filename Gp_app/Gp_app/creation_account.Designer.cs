@@ -225,6 +225,13 @@ namespace Gp_app
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "B科",
+            "G科",
+            "J科",
+            "M科",
+            "R科",
+            "S科"});
             this.comboBox1.Location = new System.Drawing.Point(109, 180);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 23);
@@ -234,6 +241,11 @@ namespace Gp_app
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "１",
+            "２",
+            "３",
+            "４"});
             this.comboBox2.Location = new System.Drawing.Point(109, 223);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 23);
@@ -243,6 +255,9 @@ namespace Gp_app
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "A1",
+            "A2"});
             this.comboBox3.Location = new System.Drawing.Point(109, 264);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 23);
@@ -252,6 +267,14 @@ namespace Gp_app
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "フットボール",
+            "野球",
+            "バスケットボール",
+            "バレーボール",
+            "囲碁将棋",
+            "E-Sport",
+            "吹奏楽"});
             this.comboBox4.Location = new System.Drawing.Point(109, 351);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(229, 23);

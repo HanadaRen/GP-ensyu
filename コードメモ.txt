@@ -17,3 +17,6 @@ this.Visible = false;　//非表示
 任意のフォームを定義したもの.Visible = true;　//表示する
 
 任意のフォームを定義したもの.ShowDialog; //ダイアログ表示
+
+DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
+//ダイアログの選択結果をresultに入れる

@@ -77,13 +77,12 @@ namespace Gp_app
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "フットボール",
             "野球",
-            "バスケットボール",
-            "バレーボール",
-            "囲碁将棋",
-            "E-Sport",
-            "吹奏楽"});
+            "フットサル",
+            "バドミントン",
+            "ボルダリング",
+            "吹奏楽",
+            "E-Sport"});
             this.comboBox4.Location = new System.Drawing.Point(112, 357);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(229, 23);

@@ -70,7 +70,6 @@ namespace Gp_app
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 22);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -80,7 +79,6 @@ namespace Gp_app
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "学籍番号";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -90,7 +88,6 @@ namespace Gp_app
             this.label2.Size = new System.Drawing.Size(91, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "e-mailアドレス";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox2
             // 
@@ -98,7 +95,6 @@ namespace Gp_app
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -108,7 +104,6 @@ namespace Gp_app
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "名前";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -118,7 +113,6 @@ namespace Gp_app
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "性別";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -128,7 +122,6 @@ namespace Gp_app
             this.label5.Size = new System.Drawing.Size(37, 15);
             this.label5.TabIndex = 7;
             this.label5.Text = "学科";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -138,7 +131,6 @@ namespace Gp_app
             this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "学年";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -148,7 +140,6 @@ namespace Gp_app
             this.label7.Size = new System.Drawing.Size(38, 15);
             this.label7.TabIndex = 9;
             this.label7.Text = "クラス";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -158,7 +149,6 @@ namespace Gp_app
             this.label8.Size = new System.Drawing.Size(67, 15);
             this.label8.TabIndex = 10;
             this.label8.Text = "出席番号";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -168,7 +158,6 @@ namespace Gp_app
             this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 11;
             this.label9.Text = "クラブ名";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBox3
             // 
@@ -176,7 +165,6 @@ namespace Gp_app
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 12;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -184,7 +172,6 @@ namespace Gp_app
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 22);
             this.textBox4.TabIndex = 13;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // radioButton1
             // 
@@ -196,7 +183,6 @@ namespace Gp_app
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "男";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -208,7 +194,6 @@ namespace Gp_app
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "女";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -220,7 +205,6 @@ namespace Gp_app
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "不明";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -236,7 +220,6 @@ namespace Gp_app
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 23);
             this.comboBox1.TabIndex = 17;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -250,7 +233,6 @@ namespace Gp_app
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 23);
             this.comboBox2.TabIndex = 18;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -262,24 +244,21 @@ namespace Gp_app
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 23);
             this.comboBox3.TabIndex = 19;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "フットボール",
             "野球",
-            "バスケットボール",
-            "バレーボール",
-            "囲碁将棋",
-            "E-Sport",
-            "吹奏楽"});
+            "フットサル",
+            "バドミントン",
+            "ボルダリング",
+            "吹奏楽",
+            "E-Sport"});
             this.comboBox4.Location = new System.Drawing.Point(109, 351);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(229, 23);
             this.comboBox4.TabIndex = 20;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // button2
             // 

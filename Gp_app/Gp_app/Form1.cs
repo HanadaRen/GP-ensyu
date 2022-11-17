@@ -18,24 +18,25 @@ namespace Gp_app
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//テーブル作成
         {   //コネクションを開いてテーブル作成をして閉じる
-            using(var con = new SQLiteConnection("Data Source=test.db"))
+            using(var con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     command.CommandText =
-                        "create table t_product(CD INTEGER PRIMARY KEY AUTOINCREMENT, productname TEXT,price INTEGER)";
+                        "create table t_product(" +
+                        "no INTEGER PRIMARY KEY, email_address TEXT, student_name TEXT, sex INTEGER, department INTEGER, school_year INTEGER, class INTEGER, attendance_number INTEGER, club_name INTEGER)";
                     command.ExecuteNonQuery();
                 }
                 con.Close();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//データ追加ボタン
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using(SQLiteTransaction trans = con.BeginTransaction())
@@ -58,7 +59,7 @@ namespace Gp_app
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {   //DataTableを作成します。
                 var dataTable = new DataTable();
                 //SQLの実行
@@ -70,7 +71,7 @@ namespace Gp_app
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using(SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using(SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using(SQLiteTransaction trans = con.BeginTransaction())
@@ -95,7 +96,7 @@ namespace Gp_app
 
         private void button5_Click(object sender, EventArgs e)
         {
-            using(SQLiteConnection con = new SQLiteConnection("Data Source=test.db"))
+            using(SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using(SQLiteTransaction trans = con.BeginTransaction())
@@ -116,7 +117,7 @@ namespace Gp_app
 
         private void button6_Click(object sender, EventArgs e)
         {   //コネクションを開いてテーブル削除をして閉じる
-            using (var con = new SQLiteConnection("Data Source=test.db"))
+            using (var con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using (SQLiteCommand command = con.CreateCommand())

@@ -35,109 +35,51 @@ namespace Gp_app
             }
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//登録ボタン
         {
+            DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //ダイアログの選択結果をresultに入れる
 
-        }
+            if (result == System.Windows.Forms.DialogResult.Yes)//ダイアログでYesを入力したら
+            {
+                this.Close();
+                //画面を閉じる
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                main_menu mm = new main_menu();
+                //main_menuをmmと定義
 
-        }
+                mm.Visible = true;
+                //main_menuを表示
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+                using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))//students.dbをconと定義
+                {
+                    con.Open();//students.dbを開いて操作できる状態にする
+                    using (SQLiteTransaction trans = con.BeginTransaction())
+                    {
+                        SQLiteCommand cmd = con.CreateCommand();
+                        //インサート
+                        cmd.CommandText = "INSERT INTO t_product (no,email_address,student_name,sex,department,school_year,class,attendance_number,club_name) VALUES (@No, @Email, @Student,@Sex,@Department,@School,@Class,@Attendance,@Club)";
+                        //パラメータセット
+                        cmd.Parameters.Add("Product", System.Data.DbType.String);
+                        cmd.Parameters.Add("Price", System.Data.DbType.Int64);
+                        //データ追加
+                        cmd.Parameters["No"].Value = int.Parse(textBox1.Text);
+                        cmd.Parameters["Email"].Value = textBox2.Text;
+                        cmd.Parameters["Student"].Value = textBox3.Text;
+                        cmd.Parameters["Sex"].Value = radioButton1.Checked;
+                        cmd.Parameters["Sex"].Value = radioButton2.Checked;
+                        cmd.Parameters["Sex"].Value = radioButton3.Checked;
+                        cmd.Parameters["Department"].Value = comboBox1.Items;
+                        cmd.Parameters["School"].Value = comboBox2.Items;
+                        cmd.Parameters["Class"].Value = comboBox3.Items;
+                        cmd.Parameters["Attendance"].Value = int.Parse(textBox4.Text);
+                        cmd.Parameters["Club"].Value = comboBox4.Items;
+                        cmd.ExecuteNonQuery();
+                        //コミット
+                        trans.Commit();
+                    }
+                }
+            }
         }
     }
 }

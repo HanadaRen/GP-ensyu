@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Gp_app
 {
@@ -19,7 +20,14 @@ namespace Gp_app
 
         private void button2_Click(object sender, EventArgs e)//検索ボタン
         {
-
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
+            {   //DataTableを作成します。
+                var dataTable = new DataTable();
+                //SQLの実行
+                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)//終了ボタン

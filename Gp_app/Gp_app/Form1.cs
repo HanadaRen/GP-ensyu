@@ -26,44 +26,43 @@ namespace Gp_app
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     command.CommandText =
-                        "create table t_product(" +
-                        "no INTEGER PRIMARY KEY, email_address TEXT, student_name TEXT, sex INTEGER, department INTEGER, school_year INTEGER, class INTEGER, attendance_number INTEGER, club_name INTEGER)";
+                        "create table t_product(no INTEGER PRYMARY KEY,email_address TEXT,student_name TEXT,sex TEXT,department TEXT,school_year TEXT,class TEXT,attendance_number INTEGER,club_name TEXT)";
                     command.ExecuteNonQuery();
                 }
                 con.Close();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)//データ追加ボタン
-        {
-            using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
-            {
-                con.Open();
-                using(SQLiteTransaction trans = con.BeginTransaction())
-                {
-                    SQLiteCommand cmd = con.CreateCommand();
-                    //インサート
-                    cmd.CommandText = "INSERT INTO t_product (productname, price) VALUES (@Product, @Price)";
-                    //パラメータセット
-                    cmd.Parameters.Add("Product", System.Data.DbType.String);
-                    cmd.Parameters.Add("Price",  System.Data.DbType.Int64);
-                    //データ追加
-                    cmd.Parameters["Product"].Value = textBox1.Text;
-                    cmd.Parameters["Price"].Value = int.Parse(textBox2.Text);
-                    cmd.ExecuteNonQuery();
-                    //コミット
-                    trans.Commit();
-                }
-            }
-        }
+        //private void button2_Click(object sender, EventArgs e)//データ追加ボタン
+        //{
+        //    using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
+        //    {
+        //        con.Open();
+        //        using(SQLiteTransaction trans = con.BeginTransaction())
+        //        {
+        //            SQLiteCommand cmd = con.CreateCommand();
+        //            //インサート
+        //            cmd.CommandText = "INSERT INTO t_product (productname, price) VALUES (@Product, @Price)";
+        //            //パラメータセット
+        //            cmd.Parameters.Add("Product", System.Data.DbType.String);
+        //            cmd.Parameters.Add("Price",  System.Data.DbType.Int64);
+        //            //データ追加
+        //            cmd.Parameters["Product"].Value = textBox1.Text;
+        //            cmd.Parameters["Price"].Value = int.Parse(textBox2.Text);
+        //            cmd.ExecuteNonQuery();
+        //            //コミット
+        //            trans.Commit();
+        //        }
+        //    }
+        //}
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//読み込み
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {   //DataTableを作成します。
                 var dataTable = new DataTable();
                 //SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
+                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product " ,con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }

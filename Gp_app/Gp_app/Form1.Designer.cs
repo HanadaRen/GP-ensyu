@@ -30,7 +30,6 @@ namespace Gp_app
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,12 +47,13 @@ namespace Gp_app
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 25);
+            this.button1.Location = new System.Drawing.Point(15, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 65);
             this.button1.TabIndex = 0;
@@ -61,20 +61,10 @@ namespace Gp_app
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(235, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "データ追加";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(421, 39);
+            this.label1.Location = new System.Drawing.Point(370, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 2;
@@ -83,7 +73,7 @@ namespace Gp_app
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(538, 39);
+            this.label2.Location = new System.Drawing.Point(487, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 3;
@@ -91,21 +81,21 @@ namespace Gp_app
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(424, 57);
+            this.textBox1.Location = new System.Drawing.Point(373, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(541, 57);
+            this.textBox2.Location = new System.Drawing.Point(490, 43);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(235, 111);
+            this.button3.Location = new System.Drawing.Point(12, 128);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 64);
             this.button3.TabIndex = 6;
@@ -116,26 +106,25 @@ namespace Gp_app
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(424, 111);
+            this.dataGridView1.Location = new System.Drawing.Point(226, 128);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(364, 97);
+            this.dataGridView1.Size = new System.Drawing.Size(562, 135);
             this.dataGridView1.TabIndex = 7;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(235, 228);
+            this.button4.Location = new System.Drawing.Point(12, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 64);
             this.button4.TabIndex = 8;
             this.button4.Text = "データ修正";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(235, 341);
+            this.button5.Location = new System.Drawing.Point(12, 382);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(166, 64);
             this.button5.TabIndex = 10;
@@ -145,21 +134,21 @@ namespace Gp_app
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(424, 292);
+            this.textBox3.Location = new System.Drawing.Point(201, 333);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 11;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(530, 292);
+            this.textBox4.Location = new System.Drawing.Point(307, 333);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 12;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(424, 250);
+            this.textBox5.Location = new System.Drawing.Point(201, 291);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 13;
@@ -167,7 +156,7 @@ namespace Gp_app
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(421, 232);
+            this.label3.Location = new System.Drawing.Point(198, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 14;
@@ -176,7 +165,7 @@ namespace Gp_app
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(527, 274);
+            this.label4.Location = new System.Drawing.Point(304, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 15);
             this.label4.TabIndex = 15;
@@ -185,7 +174,7 @@ namespace Gp_app
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(421, 274);
+            this.label5.Location = new System.Drawing.Point(198, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 15);
             this.label5.TabIndex = 16;
@@ -193,7 +182,7 @@ namespace Gp_app
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(424, 383);
+            this.textBox6.Location = new System.Drawing.Point(201, 424);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 17;
@@ -201,7 +190,7 @@ namespace Gp_app
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 365);
+            this.label6.Location = new System.Drawing.Point(198, 406);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 15);
             this.label6.TabIndex = 18;
@@ -209,13 +198,22 @@ namespace Gp_app
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(30, 110);
+            this.button6.Location = new System.Drawing.Point(12, 198);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(180, 65);
             this.button6.TabIndex = 19;
             this.button6.Text = "テーブル削除";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(201, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(166, 64);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "データ追加";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -242,6 +240,7 @@ namespace Gp_app
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -252,7 +251,6 @@ namespace Gp_app
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
@@ -270,5 +268,6 @@ namespace Gp_app
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
     }
 }

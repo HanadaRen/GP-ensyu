@@ -68,7 +68,6 @@ namespace Gp_app
             this.nobox.Name = "nobox";
             this.nobox.Size = new System.Drawing.Size(229, 22);
             this.nobox.TabIndex = 1;
-            this.nobox.Text = "20217037\r\n";
             // 
             // label1
             // 
@@ -94,7 +93,6 @@ namespace Gp_app
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "20217037-hanadaren@hcs.ac.jp\r\n";
             // 
             // label3
             // 
@@ -165,7 +163,6 @@ namespace Gp_app
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 12;
-            this.textBox3.Text = "花田琉";
             // 
             // textBox4
             // 

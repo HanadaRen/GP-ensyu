@@ -92,7 +92,6 @@ namespace Gp_app
                 }
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             using(SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))

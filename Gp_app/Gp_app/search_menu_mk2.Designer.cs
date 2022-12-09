@@ -39,7 +39,7 @@ namespace Gp_app
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(207, 361);
+            this.button2.Location = new System.Drawing.Point(416, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 29);
             this.button2.TabIndex = 43;
@@ -49,7 +49,7 @@ namespace Gp_app
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(97, 361);
+            this.button1.Location = new System.Drawing.Point(306, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 29);
             this.button1.TabIndex = 22;
@@ -64,12 +64,12 @@ namespace Gp_app
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(329, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(785, 294);
             this.dataGridView1.TabIndex = 44;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 21);
+            this.textBox1.Location = new System.Drawing.Point(392, 21);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 45;
@@ -77,7 +77,7 @@ namespace Gp_app
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 24);
+            this.label1.Location = new System.Drawing.Point(289, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 46;
@@ -87,7 +87,7 @@ namespace Gp_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 399);
+            this.ClientSize = new System.Drawing.Size(809, 399);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);

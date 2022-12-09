@@ -20,13 +20,14 @@ namespace Gp_app
 
         private void button2_Click(object sender, EventArgs e)//検索ボタン
         {
+            string serch_no = textBox1.Text;//テキストボックスの内容をserch_noに入れる
             using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {   //DataTableを作成します。
                 var dataTable = new DataTable();
                 //SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product", con);
-                adapter.Fill(dataTable);
-                dataGridView1.DataSource = dataTable;
+                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product WHERE t_product.no LIKE " + serch_no,con);
+                adapter.Fill(dataTable);//行を取得
+                dataGridView1.DataSource = dataTable;//グリッドビューに表示
             }
         }
 
@@ -35,7 +36,7 @@ namespace Gp_app
             DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
 
-            if (result == System.Windows.Forms.DialogResult.Yes)//ダイアログでYesを入力したら
+            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
             {
                 this.Close();//画面を閉じる
                 main_menu mm = new main_menu();//main_menuをmmと定義

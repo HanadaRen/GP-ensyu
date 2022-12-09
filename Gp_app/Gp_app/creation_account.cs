@@ -22,7 +22,7 @@ namespace Gp_app
             DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
 
-            if (result == System.Windows.Forms.DialogResult.Yes)//ダイアログでYesを入力したら
+            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
             {
                 this.Close();
                 //画面を閉じる
@@ -40,7 +40,7 @@ namespace Gp_app
             DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
 
-            if (result == System.Windows.Forms.DialogResult.Yes)//ダイアログでYesを入力したら
+            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
             {
 
                 main_menu mm = new main_menu();

@@ -18,7 +18,7 @@ namespace Gp_app
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)//テーブル作成
+        private void button1_Click(object sender, EventArgs e)//テーブル作成ボタン
         {   //コネクションを開いてテーブル作成をして閉じる
             using(var con = new SQLiteConnection("Data Source=students.db"))
             {
@@ -32,31 +32,7 @@ namespace Gp_app
                 con.Close();
             }
         }
-
-        //private void button2_Click(object sender, EventArgs e)//データ追加ボタン
-        //{
-        //    using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
-        //    {
-        //        con.Open();
-        //        using(SQLiteTransaction trans = con.BeginTransaction())
-        //        {
-        //            SQLiteCommand cmd = con.CreateCommand();
-        //            //インサート
-        //            cmd.CommandText = "INSERT INTO t_product (productname, price) VALUES (@Product, @Price)";
-        //            //パラメータセット
-        //            cmd.Parameters.Add("Product", System.Data.DbType.String);
-        //            cmd.Parameters.Add("Price",  System.Data.DbType.Int64);
-        //            //データ追加
-        //            cmd.Parameters["Product"].Value = textBox1.Text;
-        //            cmd.Parameters["Price"].Value = int.Parse(textBox2.Text);
-        //            cmd.ExecuteNonQuery();
-        //            //コミット
-        //            trans.Commit();
-        //        }
-        //    }
-        //}
-
-        private void button3_Click(object sender, EventArgs e)//読み込み
+        private void button3_Click(object sender, EventArgs e)//読み込みボタン
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
             {   //DataTableを作成します。
@@ -67,53 +43,7 @@ namespace Gp_app
                 dataGridView1.DataSource = dataTable;
             }
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            using(SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
-            {
-                con.Open();
-                using(SQLiteTransaction trans = con.BeginTransaction())
-                {
-                    SQLiteCommand cmd = con.CreateCommand();
-                    //インサート
-                    cmd.CommandText = "UPDATE t_product set productname = @Product, price = @Price WHERE CD = @Cd";
-                    //パラメータリセット
-                    cmd.Parameters.Add("Product", System.Data.DbType.String);
-                    cmd.Parameters.Add("Price", System.Data.DbType.Int64);
-                    cmd.Parameters.Add("Cd", System.Data.DbType.Int64);
-                    //データ追加
-                    cmd.Parameters["Product"].Value = textBox3.Text;
-                    cmd.Parameters["Price"].Value = int.Parse(textBox4.Text);
-                    cmd.Parameters["Cd"].Value = int.Parse(textBox5.Text);
-                    cmd.ExecuteNonQuery();
-                    //コミット
-                    trans.Commit();
-                }
-            }
-        }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            using(SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
-            {
-                con.Open();
-                using(SQLiteTransaction trans = con.BeginTransaction())
-                {
-                    SQLiteCommand cmd = con.CreateCommand();
-                    //インサート
-                    cmd.CommandText = "DELETE FROM t_product WHERE CD = @Cd;";
-                    //パラメータセット
-                    cmd.Parameters.Add("Cd", System.Data.DbType.Int64);
-                    //データ削除
-                    cmd.Parameters["Cd"].Value = int.Parse(textBox6.Text);
-                    cmd.ExecuteNonQuery();
-                    //コミット
-                    trans.Commit();
-                }
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)//テーブル削除ボタン
         {   //コネクションを開いてテーブル削除をして閉じる
             using (var con = new SQLiteConnection("Data Source=students.db"))
             {
@@ -126,6 +56,13 @@ namespace Gp_app
                 }
                 con.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)//戻るボタン
+        {
+            this.Close();//画面を閉じる
+            main_menu mm = new main_menu();//main_menuをmmと定義
+            mm.Visible = true;//main_menuを表示
         }
     }
 }

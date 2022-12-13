@@ -53,9 +53,32 @@ namespace Gp_app
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            //画面非表示
+
             Form1 f1 = new Form1();
 
             f1.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)//変更ボタン
+        {
+            this.Visible = false;
+            //画面非表示
+
+            fix_menu fix_Menu = new fix_menu();
+
+            fix_Menu.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)//削除ボタン
+        {
+            this.Visible = false;
+            //画面非表示
+
+            delete_menu delete_Menu = new delete_menu();
+
+            delete_Menu.Show();
         }
     }
 }

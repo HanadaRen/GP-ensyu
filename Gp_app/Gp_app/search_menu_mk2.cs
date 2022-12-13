@@ -33,15 +33,9 @@ namespace Gp_app
 
         private void button1_Click(object sender, EventArgs e)//終了ボタン
         {
-            DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //ダイアログの選択結果をresultに入れる
-
-            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
-            {
                 this.Close();//画面を閉じる
                 main_menu mm = new main_menu();//main_menuをmmと定義
                 mm.Visible = true;//main_menuを表示
-            }
         }
     }
 }

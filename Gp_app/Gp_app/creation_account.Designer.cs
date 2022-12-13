@@ -170,7 +170,6 @@ namespace Gp_app
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 22);
             this.textBox4.TabIndex = 13;
-            this.textBox4.Text = "30";
             // 
             // comboBox1
             // 

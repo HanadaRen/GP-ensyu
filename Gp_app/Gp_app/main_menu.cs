@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gp_app
@@ -27,6 +20,7 @@ namespace Gp_app
             this.Visible = false;
             //main_menuを非表示
         }
+
         private void button3_Click(object sender, EventArgs e)//終了ボタン
         {
             DialogResult result = MessageBox.Show("本当に終了しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question); 
@@ -51,14 +45,16 @@ namespace Gp_app
             //search_menu_mk2を呼び出す
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)//DB画面ボタン
         {
             this.Visible = false;
             //画面非表示
 
             Form1 f1 = new Form1();
+            //Form1をf1と定義
 
             f1.Show();
+            //Form1を呼び出す
         }
 
         private void button5_Click(object sender, EventArgs e)//変更ボタン
@@ -67,8 +63,10 @@ namespace Gp_app
             //画面非表示
 
             fix_menu fix_Menu = new fix_menu();
+            //fix_Menuをfix_menuと定義
 
             fix_Menu.Show();
+            //fix_Menuを呼び出す
         }
 
         private void button6_Click(object sender, EventArgs e)//削除ボタン
@@ -77,8 +75,10 @@ namespace Gp_app
             //画面非表示
 
             delete_menu delete_Menu = new delete_menu();
+            //delete_menuをdelete_Menuと定義
 
             delete_Menu.Show();
+            //delete_menuを呼び出す
         }
     }
 }

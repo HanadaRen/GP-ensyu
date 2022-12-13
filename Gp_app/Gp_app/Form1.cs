@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -19,14 +13,15 @@ namespace Gp_app
         }
 
         private void button1_Click(object sender, EventArgs e)//テーブル作成ボタン
-        {   //コネクションを開いてテーブル作成をして閉じる
+        {   
+            //コネクションを開いてテーブル作成をして閉じる
             using(var con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     command.CommandText =
-                        "create table t_product(no INTEGER PRYMARY KEY,email_address TEXT,student_name TEXT,sex TEXT,department TEXT,school_year TEXT,class TEXT,attendance_number INTEGER,club_name TEXT)";
+                        "create table t_product(registration_number  INTEGER PRIMARY KEY AUTOINCREMENT,no INTEGER,email_address TEXT,student_name TEXT,sex TEXT,department TEXT,school_year TEXT,class TEXT,attendance_number INTEGER,club_name TEXT,registered_date TEXT)";
                     command.ExecuteNonQuery();
                 }
                 con.Close();
@@ -38,7 +33,7 @@ namespace Gp_app
             {   //DataTableを作成します。
                 var dataTable = new DataTable();
                 //SQLの実行
-                var adapter = new SQLiteDataAdapter("SELECT * FROM t_product " ,con);
+                var adapter = new SQLiteDataAdapter("SELECT* FROM t_product ", con);
                 adapter.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
             }
@@ -57,12 +52,19 @@ namespace Gp_app
                 con.Close();
             }
         }
-
         private void button2_Click(object sender, EventArgs e)//戻るボタン
         {
             this.Close();//画面を閉じる
             main_menu mm = new main_menu();//main_menuをmmと定義
             mm.Visible = true;//main_menuを表示
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text == string.Empty)
+            {
+
+            }
         }
     }
 }

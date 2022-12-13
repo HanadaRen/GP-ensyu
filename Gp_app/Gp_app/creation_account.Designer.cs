@@ -68,6 +68,7 @@ namespace Gp_app
             this.nobox.Name = "nobox";
             this.nobox.Size = new System.Drawing.Size(229, 22);
             this.nobox.TabIndex = 1;
+            this.nobox.Text = "20217037";
             // 
             // label1
             // 
@@ -93,6 +94,7 @@ namespace Gp_app
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "sasasa@444";
             // 
             // label3
             // 
@@ -163,6 +165,7 @@ namespace Gp_app
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 12;
+            this.textBox3.Text = "花田琉";
             // 
             // textBox4
             // 
@@ -170,6 +173,7 @@ namespace Gp_app
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 22);
             this.textBox4.TabIndex = 13;
+            this.textBox4.Text = "30";
             // 
             // comboBox1
             // 
@@ -252,6 +256,7 @@ namespace Gp_app
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(229, 23);
             this.comboBox5.TabIndex = 22;
+            this.comboBox5.Text = "あああ";
             // 
             // creation_account
             // 

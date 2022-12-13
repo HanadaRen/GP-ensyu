@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -20,7 +14,7 @@ namespace Gp_app
 
         private void button1_Click(object sender, EventArgs e)//変更ボタン
         {
-            DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("この内容で修正しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
 
             if (result == DialogResult.Yes)//ダイアログでYesを入力したら

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -37,17 +31,20 @@ namespace Gp_app
 
         private void button2_Click(object sender, EventArgs e)//登録ボタン
         {
+
             DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
 
             if (result == DialogResult.Yes)//ダイアログでYesを入力したら
-            {
-
+            {   
                 main_menu mm = new main_menu();
                 //main_menuをmmと定義
 
                 mm.Visible = true;
                 //main_menuを表示
+
+                DateTime dt = DateTime.Now;
+                //現在時刻を取得
 
                 using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))//students.dbをconと定義
                 {
@@ -55,8 +52,8 @@ namespace Gp_app
                     using (SQLiteTransaction trans = con.BeginTransaction()){
                         SQLiteCommand cmd = con.CreateCommand();
                         //インサート
-                        cmd.CommandText = "INSERT INTO t_product (no,email_address,student_name,sex,department,school_year,class,attendance_number,club_name)" +
-                                                       " VALUES (@No,@Email_address,@Student_name,@Sex,@Department,@School_year,@Class,@Attendance_number,@Club_name)";
+                        cmd.CommandText = "INSERT INTO t_product (no,email_address,student_name,sex,department,school_year,class,attendance_number,club_name,registered_date)" +
+                                                       " VALUES (@No,@Email_address,@Student_name,@Sex,@Department,@School_year,@Class,@Attendance_number,@Club_name,@Rgis_date)";
                         //パラメータリセット
                         cmd.Parameters.Add("No", DbType.Int32);//学籍番号
                         cmd.Parameters.Add("Email_address", DbType.String);//メルアド
@@ -67,6 +64,7 @@ namespace Gp_app
                         cmd.Parameters.Add("Class", DbType.String);//クラス
                         cmd.Parameters.Add("Attendance_number", DbType.Int32);//出席番号
                         cmd.Parameters.Add("Club_name", DbType.String);//クラブ名
+                        cmd.Parameters.Add("Rgis_date", DbType.DateTime);//登録日時
                         //データ追加
                         cmd.Parameters["No"].Value = nobox.Text;//学籍番号
                         cmd.Parameters["Email_address"].Value = textBox2.Text;//メルアド
@@ -77,6 +75,7 @@ namespace Gp_app
                         cmd.Parameters["Class"].Value = comboBox3.SelectedItem.ToString();//クラス
                         cmd.Parameters["Attendance_number"].Value = textBox4.Text;//出席番号
                         cmd.Parameters["Club_name"].Value = comboBox4.SelectedItem.ToString();//クラブ名
+                        cmd.Parameters["Rgis_date"].Value = dt;//登録日時
                         cmd.ExecuteNonQuery();
                         //コミット
                         trans.Commit();

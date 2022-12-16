@@ -72,18 +72,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="fix_menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fix_menu.Designer.cs">
-      <DependentUpon>fix_menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="delete_menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="delete_menu.Designer.cs">
-      <DependentUpon>delete_menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="search_menu_mk2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +92,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="delete_menu.resx">
-      <DependentUpon>delete_menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fix_menu.resx">
-      <DependentUpon>fix_menu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

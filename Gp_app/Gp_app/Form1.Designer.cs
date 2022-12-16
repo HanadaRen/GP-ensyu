@@ -34,8 +34,6 @@ namespace Gp_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +52,7 @@ namespace Gp_app
             this.button3.Location = new System.Drawing.Point(387, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 64);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 2;
             this.button3.Text = "データ読み込み";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -74,45 +72,28 @@ namespace Gp_app
             this.button6.Location = new System.Drawing.Point(201, 11);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(180, 65);
-            this.button6.TabIndex = 19;
+            this.button6.TabIndex = 1;
             this.button6.Text = "テーブル削除";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(559, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 64);
-            this.button2.TabIndex = 20;
+            this.button2.TabIndex = 3;
             this.button2.Text = "戻る";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(473, 468);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 64);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "ボタン";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(333, 490);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 604);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
+            this.CancelButton = this.button2;
+            this.ClientSize = new System.Drawing.Size(740, 319);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
@@ -123,7 +104,6 @@ namespace Gp_app
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -134,7 +114,5 @@ namespace Gp_app
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

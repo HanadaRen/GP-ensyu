@@ -8,8 +8,9 @@ namespace Gp_app
         public main_menu()
         {
             InitializeComponent();
+            ControlBox = false;
         }
-        private void button1_Click(object sender, EventArgs e)//登録画面移動ボタン
+        private void Creation_account_button_Click(object sender, EventArgs e)//登録画面移動ボタン
         {
             creation_account ca = new creation_account();
             //creation_accountをcaと定義
@@ -20,8 +21,7 @@ namespace Gp_app
             this.Visible = false;
             //main_menuを非表示
         }
-
-        private void button3_Click(object sender, EventArgs e)//終了ボタン
+        private void Exit_button_Click(object sender, EventArgs e)//終了ボタン
         {
             DialogResult result = MessageBox.Show("本当に終了しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question); 
             //ダイアログの選択結果をresultに入れる
@@ -32,8 +32,7 @@ namespace Gp_app
                 //アプリケーションの終了
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)//検索ボタン
+        private void Search_button_Click(object sender, EventArgs e)//検索ボタン
         {
             this.Visible = false;
             //画面非表示
@@ -44,8 +43,7 @@ namespace Gp_app
             sm.Show();
             //search_menu_mk2を呼び出す
         }
-
-        private void button4_Click(object sender, EventArgs e)//DB画面ボタン
+        private void DB_button_Click(object sender, EventArgs e)//DB画面ボタン
         {
             this.Visible = false;
             //画面非表示
@@ -55,30 +53,6 @@ namespace Gp_app
 
             f1.Show();
             //Form1を呼び出す
-        }
-
-        private void button5_Click(object sender, EventArgs e)//変更ボタン
-        {
-            this.Visible = false;
-            //画面非表示
-
-            fix_menu fix_Menu = new fix_menu();
-            //fix_Menuをfix_menuと定義
-
-            fix_Menu.Show();
-            //fix_Menuを呼び出す
-        }
-
-        private void button6_Click(object sender, EventArgs e)//削除ボタン
-        {
-            this.Visible = false;
-            //画面非表示
-
-            delete_menu delete_Menu = new delete_menu();
-            //delete_menuをdelete_Menuと定義
-
-            delete_Menu.Show();
-            //delete_menuを呼び出す
         }
     }
 }

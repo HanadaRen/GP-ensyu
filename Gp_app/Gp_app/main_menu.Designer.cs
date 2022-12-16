@@ -29,85 +29,67 @@ namespace Gp_app
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.Creation_account_button = new System.Windows.Forms.Button();
+            this.Search_button = new System.Windows.Forms.Button();
+            this.Exit_button = new System.Windows.Forms.Button();
+            this.DB_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Creation_account_button
             // 
-            this.button1.Location = new System.Drawing.Point(11, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Creation_account_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Creation_account_button.Location = new System.Drawing.Point(12, 12);
+            this.Creation_account_button.Name = "Creation_account_button";
+            this.Creation_account_button.Size = new System.Drawing.Size(167, 86);
+            this.Creation_account_button.TabIndex = 0;
+            this.Creation_account_button.Text = "登録";
+            this.Creation_account_button.UseVisualStyleBackColor = true;
+            this.Creation_account_button.Click += new System.EventHandler(this.Creation_account_button_Click);
             // 
-            // button2
+            // Search_button
             // 
-            this.button2.Location = new System.Drawing.Point(105, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 65);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "検索";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Search_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Search_button.Location = new System.Drawing.Point(185, 12);
+            this.Search_button.Name = "Search_button";
+            this.Search_button.Size = new System.Drawing.Size(167, 86);
+            this.Search_button.TabIndex = 1;
+            this.Search_button.Text = "検索";
+            this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
-            // button3
+            // Exit_button
             // 
-            this.button3.Location = new System.Drawing.Point(269, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 45);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "終了";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Exit_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Exit_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Exit_button.Location = new System.Drawing.Point(185, 104);
+            this.Exit_button.Name = "Exit_button";
+            this.Exit_button.Size = new System.Drawing.Size(167, 66);
+            this.Exit_button.TabIndex = 5;
+            this.Exit_button.Text = "終了";
+            this.Exit_button.UseVisualStyleBackColor = true;
+            this.Exit_button.Click += new System.EventHandler(this.Exit_button_Click);
             // 
-            // button4
+            // DB_button
             // 
-            this.button4.Location = new System.Drawing.Point(12, 153);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 45);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "DB画面";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(199, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 65);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "修正";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(293, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 65);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "削除";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.DB_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.DB_button.Location = new System.Drawing.Point(12, 104);
+            this.DB_button.Name = "DB_button";
+            this.DB_button.Size = new System.Drawing.Size(167, 66);
+            this.DB_button.TabIndex = 4;
+            this.DB_button.Text = "DB画面";
+            this.DB_button.UseVisualStyleBackColor = true;
+            this.DB_button.Click += new System.EventHandler(this.DB_button_Click);
             // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 210);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.CancelButton = this.Exit_button;
+            this.ClientSize = new System.Drawing.Size(364, 182);
+            this.Controls.Add(this.DB_button);
+            this.Controls.Add(this.Exit_button);
+            this.Controls.Add(this.Search_button);
+            this.Controls.Add(this.Creation_account_button);
             this.Name = "main_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "メインメニュー";
@@ -117,12 +99,10 @@ namespace Gp_app
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Creation_account_button;
+        private System.Windows.Forms.Button Search_button;
+        private System.Windows.Forms.Button Exit_button;
+        private System.Windows.Forms.Button DB_button;
     }
 }
 

@@ -10,8 +10,8 @@ namespace Gp_app
         public search_menu_mk2()
         {
             InitializeComponent();
-            ControlBox = false;
-            this.Load += search_start;
+            ControlBox = false;//右上の_□×非表示
+            this.Load += search_start;//search_start呼び出し
         }
         private void Search_button_Click(object sender, EventArgs e)//検索ボタン
         {
@@ -26,10 +26,9 @@ namespace Gp_app
                     var adapter = new SQLiteDataAdapter("SELECT * FROM t_product WHERE t_product.no LIKE " + serch_no, con);//SQLの実行
                     adapter.Fill(dataTable);//行を取得
                     dataGridView1.DataSource = dataTable;//グリッドビューに表示
-                    //dataGridView1.Columns[0].HeaderText = "はじめの列";
                 }
             }
-            else//空白だとfalse
+            else//空白だと
             {
                 DialogResult result = MessageBox.Show("数字を入力してください。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //ダイアログの選択結果をresultに入れる
@@ -78,7 +77,6 @@ namespace Gp_app
                             var adapter = new SQLiteDataAdapter("SELECT * FROM t_product WHERE t_product.no LIKE " + serch_no, con);//SQLの実行
                             adapter.Fill(dataTable);//行を取得
                             dataGridView1.DataSource = dataTable;//グリッドビューに表示
-                                                                 //dataGridView1.Columns[0].HeaderText = "はじめの列";
                         }
                     }
                 }
@@ -144,6 +142,7 @@ namespace Gp_app
                 dataGridView1.Columns[7].HeaderText = "出席番号";
                 dataGridView1.Columns[8].HeaderText = "クラブ名";
                 dataGridView1.Columns[9].HeaderText = "登録日時";
+                //列名を付けた
             }
         }
     }

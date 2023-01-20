@@ -7,9 +7,6 @@ C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.csproj.CoreCompileInputs.cache
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.exe
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.pdb
-C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.main_menu.resources
-C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.creation_account.resources
-C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.search_menu_mk2.resources
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\EntityFramework.dll
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\System.Data.SQLite.dll
@@ -44,3 +41,6 @@ C:\Users\Owner\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_a
 C:\Users\Owner\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.pdb
 C:\Users\Owner\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.delete_menu.resources
 C:\Users\Owner\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.fix_menu.resources
+C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.SearchMenu.resources
+C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.MainMenu.resources
+C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.CreationAccount.resources

@@ -34,6 +34,9 @@ namespace Gp_app
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,12 +91,32 @@ namespace Gp_app
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button4
+            // 
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button4.Location = new System.Drawing.Point(745, 83);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(166, 64);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "戻る";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(770, 197);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(740, 319);
+            this.ClientSize = new System.Drawing.Size(932, 319);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
@@ -104,6 +127,7 @@ namespace Gp_app
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -114,5 +138,8 @@ namespace Gp_app
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

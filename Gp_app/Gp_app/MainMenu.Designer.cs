@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_app
 {
-    partial class main_menu
+    partial class MainMenu
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -44,7 +44,7 @@ namespace Gp_app
             this.Creation_account_button.TabIndex = 0;
             this.Creation_account_button.Text = "登録";
             this.Creation_account_button.UseVisualStyleBackColor = true;
-            this.Creation_account_button.Click += new System.EventHandler(this.Creation_account_button_Click);
+            this.Creation_account_button.Click += new System.EventHandler(this.CreationAccountButtonClick);
             // 
             // Search_button
             // 
@@ -55,7 +55,7 @@ namespace Gp_app
             this.Search_button.TabIndex = 1;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
-            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
+            this.Search_button.Click += new System.EventHandler(this.SearchButtonClick);
             // 
             // Exit_button
             // 
@@ -67,7 +67,7 @@ namespace Gp_app
             this.Exit_button.TabIndex = 5;
             this.Exit_button.Text = "終了";
             this.Exit_button.UseVisualStyleBackColor = true;
-            this.Exit_button.Click += new System.EventHandler(this.Exit_button_Click);
+            this.Exit_button.Click += new System.EventHandler(this.ExitButtonClick);
             // 
             // DB_button
             // 
@@ -78,7 +78,7 @@ namespace Gp_app
             this.DB_button.TabIndex = 4;
             this.DB_button.Text = "DB画面";
             this.DB_button.UseVisualStyleBackColor = true;
-            this.DB_button.Click += new System.EventHandler(this.DB_button_Click);
+            this.DB_button.Click += new System.EventHandler(this.DbButtonClick);
             // 
             // main_menu
             // 

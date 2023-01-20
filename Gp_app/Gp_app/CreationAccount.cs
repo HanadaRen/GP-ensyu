@@ -3,78 +3,90 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Collections;
-using System.Diagnostics;
 
 namespace Gp_app
 {
-    public partial class creation_account : Form
+    public partial class CreationAccount : Form
     {
-        public creation_account()
+        public CreationAccount()
         {
             InitializeComponent();
             ControlBox = false;
         }
-        private void Return_button_Click(object sender, EventArgs e)//戻るボタン
+
+        private void ReturnButtonClick(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
+            DialogResult result = MessageBox.Show("入力したデータがすべて消えます。本当に戻りますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
+            //ダイアログでYesを入力したら
+            if (result == DialogResult.Yes)
             {
-                this.Close();
                 //画面を閉じる
+                this.Close();
 
-                main_menu mm = new main_menu();
                 //main_menuをmmと定義
+                MainMenu mainMenu = new MainMenu();
 
-                mm.Visible = true;
                 //main_menuを表示
+                mainMenu.Visible = true;
             }
         }
-        private void Register_button_Click(object sender, EventArgs e)//登録ボタン
+        private void RegisterButtonClick(object sender, EventArgs e)//登録ボタン
         {
-
-            DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //ダイアログの選択結果をresultに入れる
-            
-            TextBox[] TxtArray = { textBox1, textBox2, textBox3, textBox4 };
-            ComboBox[] CmbArray = { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5 };
+            DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            foreach (TextBox i in TxtArray)
+            TextBox[] txtArray = { textBox1, textBox2, textBox3, textBox4 };
+            ComboBox[] cmbArray = { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5 };
+
+            foreach (TextBox i in txtArray)
             {
                 if (String.IsNullOrEmpty(i.Text))
                 {
                     i.BackColor = Color.Red;
                 }
+                else
+                {
+                    i.BackColor = Color.White;
+
+                }
             }
 
-            foreach (ComboBox i in CmbArray)
+            foreach (ComboBox i in cmbArray)
             {
                 if (String.IsNullOrEmpty(i.Text))
                 {
                     i.BackColor = Color.Red;
                 }
+                else
+                {
+                    i.BackColor = Color.White;
+                }
             }
 
-            if (result == DialogResult.Yes)//ダイアログでYesを入力したら
+            //ダイアログでYesを入力したら
+            if (result == DialogResult.Yes)
             {
-                main_menu mm = new main_menu();
                 //main_menuをmmと定義
+                MainMenu mainMenu = new MainMenu();
 
-                mm.Visible = true;
                 //main_menuを表示
+                mainMenu.Visible = true;
 
-                DateTime dt = DateTime.Now;
                 //現在時刻を取得
+                DateTime dateTime = DateTime.Now;
 
-                using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))//students.dbをconと定義
+                //students.dbをconと定義
+                using (SQLiteConnection studentsDb = new SQLiteConnection("Data Source=students.db"))
                 {
-                    con.Open();//students.dbを開いて操作できる状態にする
-                    using (SQLiteTransaction trans = con.BeginTransaction())
+                    //students.dbを開いて操作できる状態にする
+                    studentsDb.Open();
+                    using (SQLiteTransaction trans = studentsDb.BeginTransaction())
                     {
-                        SQLiteCommand cmd = con.CreateCommand();
                         //インサート
+                        SQLiteCommand cmd = studentsDb.CreateCommand();
+
                         cmd.CommandText = "INSERT INTO t_product (no,email_address,student_name,sex,department,school_year,class,attendance_number,club_name,registered_date)" +
                                                        " VALUES (@No,@Email_address,@Student_name,@Sex,@Department,@School_year,@Class,@Attendance_number,@Club_name,@Rgis_date)";
                         //パラメータリセット
@@ -98,7 +110,7 @@ namespace Gp_app
                         cmd.Parameters["Class"].Value = comboBox3.SelectedItem.ToString();//クラス
                         cmd.Parameters["Attendance_number"].Value = textBox4.Text;//出席番号
                         cmd.Parameters["Club_name"].Value = comboBox4.SelectedItem.ToString();//クラブ名
-                        cmd.Parameters["Rgis_date"].Value = dt;//登録日時
+                        cmd.Parameters["Rgis_date"].Value = dateTime;//登録日時
                         cmd.ExecuteNonQuery();
                         //コミット
                         trans.Commit();
@@ -109,5 +121,34 @@ namespace Gp_app
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TextBox[] txtArray = { textBox1, textBox2, textBox3, textBox4 };
+            ComboBox[] cmbArray = { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5 };
+
+            foreach (TextBox i in txtArray)
+            {
+                if (String.IsNullOrEmpty(i.Text))
+                {
+                    i.BackColor = Color.Red;
+                }
+                else
+                {
+                    i.BackColor = Color.White;
+                }
+            }
+
+            foreach (ComboBox i in cmbArray)
+            {
+                if (String.IsNullOrEmpty(i.Text))
+                {
+                    i.BackColor = Color.Red;
+                }
+                else
+                {
+                    i.BackColor = Color.White;
+                }
+            }
+        }
     }
 }

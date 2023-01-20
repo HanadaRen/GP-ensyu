@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Drawing;
 
 namespace Gp_app
 {
@@ -14,9 +15,9 @@ namespace Gp_app
             this.Load += search_start;
         }
         private void button1_Click(object sender, EventArgs e)//テーブル作成ボタン
-        {   
+        {
             //コネクションを開いてテーブル作成をして閉じる
-            using(var con = new SQLiteConnection("Data Source=students.db"))
+            using (var con = new SQLiteConnection("Data Source=students.db"))
             {
                 con.Open();
                 using (SQLiteCommand command = con.CreateCommand())
@@ -47,6 +48,15 @@ namespace Gp_app
                 dataGridView1.Columns[7].HeaderText = "出席番号";
                 dataGridView1.Columns[8].HeaderText = "クラブ名";
                 dataGridView1.Columns[9].HeaderText = "登録日時";
+
+                //データグリッドビューの列名を中央揃え
+                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                //データグリッドビューを書き換え不可に設定
+                dataGridView1.ReadOnly = true;
+
+                //データグリッドビューの奇数行の背景を水色に変更
+                dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             }
         }
         private void button6_Click(object sender, EventArgs e)//テーブル削除ボタン
@@ -66,7 +76,7 @@ namespace Gp_app
         private void button2_Click(object sender, EventArgs e)//戻るボタン
         {
             this.Close();//画面を閉じる
-            main_menu mm = new main_menu();//main_menuをmmと定義
+            MainMenu mm = new MainMenu();//main_menuをmmと定義
             mm.Visible = true;//main_menuを表示
         }
         private void search_start(object sender, EventArgs e)//データグリッドビューに一覧を表示
@@ -88,7 +98,23 @@ namespace Gp_app
                 dataGridView1.Columns[7].HeaderText = "出席番号";
                 dataGridView1.Columns[8].HeaderText = "クラブ名";
                 dataGridView1.Columns[9].HeaderText = "登録日時";
+
+                //データグリッドビューの列名を中央揃え
+                dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                //データグリッドビューを書き換え不可に設定
+                dataGridView1.ReadOnly = true;
+
+                //データグリッドビューの奇数行の背景を水色に変更
+                dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.IndianRed;
+
+            button4.BackColor = Color.IndianRed;
         }
     }
 }

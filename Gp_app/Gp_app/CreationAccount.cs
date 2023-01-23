@@ -14,6 +14,9 @@ namespace Gp_app
             ControlBox = false;
         }
 
+        /// <summary>
+        /// 戻るボタン
+        /// </summary>
         private void ReturnButtonClick(object sender, EventArgs e)
         {
             //ダイアログの選択結果をresultに入れる
@@ -32,7 +35,11 @@ namespace Gp_app
                 mainMenu.Visible = true;
             }
         }
-        private void RegisterButtonClick(object sender, EventArgs e)//登録ボタン
+
+        /// <summary>
+        /// 登録ボタン
+        /// </summary>
+        private void RegisterButtonClick(object sender, EventArgs e)
         {
             //ダイアログの選択結果をresultに入れる
             DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -121,6 +128,9 @@ namespace Gp_app
             }
         }
 
+        /// <summary>
+        /// 実験
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             TextBox[] txtArray = { textBox1, textBox2, textBox3, textBox4 };

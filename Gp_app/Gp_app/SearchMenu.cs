@@ -8,9 +8,6 @@ namespace Gp_app
 {
     public partial class SearchMenu : Form
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public SearchMenu()
         {
             InitializeComponent();
@@ -47,10 +44,36 @@ namespace Gp_app
             //空白だと
             else
             {
-                //ダイアログの選択結果をresultに入れる
-                DialogResult result = MessageBox.Show("数字を入力してください。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
+                {   //DataTableを作成します。
+                    var dataTable = new DataTable();
+                    //SQLの実行
+                    var adapter = new SQLiteDataAdapter("SELECT* FROM t_product ", con);
+                    adapter.Fill(dataTable);
 
+                    //列名を付けた
+                    dataGridView1.DataSource = dataTable;
+                    dataGridView1.Columns[0].HeaderText = "学籍番号";
+                    dataGridView1.Columns[1].HeaderText = "メルアド";
+                    dataGridView1.Columns[2].HeaderText = "名前";
+                    dataGridView1.Columns[3].HeaderText = "性別";
+                    dataGridView1.Columns[4].HeaderText = "学科";
+                    dataGridView1.Columns[5].HeaderText = "学年";
+                    dataGridView1.Columns[6].HeaderText = "クラス";
+                    dataGridView1.Columns[7].HeaderText = "出席番号";
+                    dataGridView1.Columns[8].HeaderText = "クラブ名";
+                    dataGridView1.Columns[9].HeaderText = "登録日時";
+
+                    //データグリッドビューの列名を中央揃え
+                    dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                    //データグリッドビューを書き換え不可に設定
+                    dataGridView1.ReadOnly = true;
+
+                    //データグリッドビューの奇数行の背景を水色に変更
+                    dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+                }
+            }
         }
 
         /// <summary>
@@ -67,7 +90,11 @@ namespace Gp_app
             //main_menuを表示
             mainMenu.Visible = true;
         }
-        private void FixButtonClick(object sender, EventArgs e)//修正ボタン
+
+        /// <summary>
+        /// 修正ボタン
+        /// </summary>
+        private void FixButtonClick(object sender, EventArgs e)
         {
             //空白じゃなかったらtrue
             if (!String.IsNullOrEmpty(textBox1.Text) &&
@@ -118,7 +145,7 @@ namespace Gp_app
                     }
                 }
             }
-            //ダイアログでNoを入力したら
+            //空白だったら
             else
             {
                 DialogResult result2 = MessageBox.Show("記入漏れがあります。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -130,49 +157,68 @@ namespace Gp_app
         /// </summary>
         private void DeleteButtonClick(object sender, EventArgs e)
         {
-            //空白じゃなかったらtrue
-            if (!String.IsNullOrEmpty(textBox1.Text))
+            //空白だったらtrue
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                DialogResult result2 = MessageBox.Show("削除したいデータを検索してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 //ダイアログの選択結果をresultに入れる
                 DialogResult result = MessageBox.Show("本当に削除しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 //ダイアログでYesを入力したら
-                if (result == DialogResult.No)
+                if (result == DialogResult.Yes)
                 {
-                    DialogResult result2 = MessageBox.Show("削除したいデータを検索してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
-                {
-                    con.Open();
-                    using (SQLiteTransaction trans = con.BeginTransaction())
+                    using (SQLiteConnection con = new SQLiteConnection("Data Source=students.db"))
                     {
-                        SQLiteCommand cmd = con.CreateCommand();
+                        con.Open();
+                        using (SQLiteTransaction trans = con.BeginTransaction())
+                        {
+                            SQLiteCommand cmd = con.CreateCommand();
 
-                        // インサート
-                        cmd.CommandText = "DELETE FROM t_product WHERE No = @no;";
+                            // インサート
+                            cmd.CommandText = "DELETE FROM t_product WHERE No = @no;";
 
-                        // パラメータセット
-                        cmd.Parameters.Add("no", DbType.Int64);
+                            // パラメータセット
+                            cmd.Parameters.Add("no", DbType.Int64);
 
-                        // データ削除
-                        cmd.Parameters["no"].Value = int.Parse(textBox1.Text);
+                            // データ削除
+                            cmd.Parameters["no"].Value = int.Parse(textBox1.Text);
 
-                        cmd.ExecuteNonQuery();
+                            cmd.ExecuteNonQuery();
 
-                        // コミット
-                        trans.Commit();
+                            // コミット
+                            trans.Commit();
 
-                        //画面を閉じる
-                        this.Close();
+                            //DataTableを作成します。
+                            var dataTable = new DataTable();
+                            //SQLの実行
+                            var adapter = new SQLiteDataAdapter("SELECT* FROM t_product ", con);
+                            adapter.Fill(dataTable);
 
-                        //main_menuをmmと定義
-                        MainMenu mm = new MainMenu();
+                            //列名を付けた
+                            dataGridView1.DataSource = dataTable;
+                            dataGridView1.Columns[0].HeaderText = "学籍番号";
+                            dataGridView1.Columns[1].HeaderText = "メルアド";
+                            dataGridView1.Columns[2].HeaderText = "名前";
+                            dataGridView1.Columns[3].HeaderText = "性別";
+                            dataGridView1.Columns[4].HeaderText = "学科";
+                            dataGridView1.Columns[5].HeaderText = "学年";
+                            dataGridView1.Columns[6].HeaderText = "クラス";
+                            dataGridView1.Columns[7].HeaderText = "出席番号";
+                            dataGridView1.Columns[8].HeaderText = "クラブ名";
+                            dataGridView1.Columns[9].HeaderText = "登録日時";
 
-                        //main_menuを表示
-                        mm.Visible = true;
+                            //データグリッドビューの列名を中央揃え
+                            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                            //データグリッドビューを書き換え不可に設定
+                            dataGridView1.ReadOnly = true;
+
+                            //データグリッドビューの奇数行の背景を水色に変更
+                            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+                        }
                     }
                 }
             }

@@ -25,7 +25,11 @@ namespace Gp_app
             //main_menuを非表示
             this.Visible = false;
         }
-        private void ExitButtonClick(object sender, EventArgs e)//終了ボタン
+
+        /// <summary>
+        /// 終了ボタン
+        /// </summary>
+        private void ExitButtonClick(object sender, EventArgs e)
         {
             //ダイアログの選択結果をresultに入れる
             DialogResult result = MessageBox.Show("本当に終了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -44,7 +44,7 @@ namespace Gp_app
             this.LoginButtton.Location = new System.Drawing.Point(312, 123);
             this.LoginButtton.Name = "LoginButtton";
             this.LoginButtton.Size = new System.Drawing.Size(125, 38);
-            this.LoginButtton.TabIndex = 0;
+            this.LoginButtton.TabIndex = 4;
             this.LoginButtton.Text = "ログイン";
             this.LoginButtton.UseVisualStyleBackColor = true;
             this.LoginButtton.Click += new System.EventHandler(this.LoginButtton_Click);
@@ -65,7 +65,8 @@ namespace Gp_app
             this.PasswordBox.MaxLength = 4;
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(185, 22);
-            this.PasswordBox.TabIndex = 5;
+            this.PasswordBox.TabIndex = 2;
+            this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // EndButton
             // 
@@ -73,7 +74,7 @@ namespace Gp_app
             this.EndButton.Location = new System.Drawing.Point(161, 123);
             this.EndButton.Name = "EndButton";
             this.EndButton.Size = new System.Drawing.Size(125, 38);
-            this.EndButton.TabIndex = 6;
+            this.EndButton.TabIndex = 5;
             this.EndButton.Text = "戻る";
             this.EndButton.UseVisualStyleBackColor = true;
             this.EndButton.Click += new System.EventHandler(this.EndButton_Click);
@@ -84,7 +85,7 @@ namespace Gp_app
             this.ChangeButton.Location = new System.Drawing.Point(351, 62);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(85, 32);
-            this.ChangeButton.TabIndex = 7;
+            this.ChangeButton.TabIndex = 3;
             this.ChangeButton.Text = "表示切替";
             this.ChangeButton.UseVisualStyleBackColor = true;
             this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
@@ -95,7 +96,7 @@ namespace Gp_app
             this.UserNameBox.MaxLength = 20;
             this.UserNameBox.Name = "UserNameBox";
             this.UserNameBox.Size = new System.Drawing.Size(185, 22);
-            this.UserNameBox.TabIndex = 9;
+            this.UserNameBox.TabIndex = 1;
             // 
             // label1
             // 

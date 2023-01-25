@@ -56,20 +56,5 @@ namespace Gp_app
             //search_menu_mk2を呼び出す
             searchMenu.Show();
         }
-
-        /// <summary>
-        /// DB画面ボタン
-        /// </summary>
-        /*private void DbButtonClick(object sender, EventArgs e)
-        {
-            //画面非表示
-            this.Visible = false;
-
-            //Form1をf1と定義
-            Form1 form1 = new Form1();
-
-            //Form1を呼び出す
-            form1.Show();
-        }*/
     }
 }

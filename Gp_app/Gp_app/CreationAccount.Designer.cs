@@ -51,7 +51,6 @@ namespace Gp_app
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Return_button
@@ -274,18 +273,6 @@ namespace Gp_app
             this.panel1.Size = new System.Drawing.Size(230, 368);
             this.panel1.TabIndex = 12;
             // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(30, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 40);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "戻る";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // CreationAccount
             // 
             this.AcceptButton = this.Register_button;
@@ -293,7 +280,6 @@ namespace Gp_app
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Return_button;
             this.ClientSize = new System.Drawing.Size(414, 465);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.Register_button);
@@ -347,6 +333,5 @@ namespace Gp_app
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
     }
 }

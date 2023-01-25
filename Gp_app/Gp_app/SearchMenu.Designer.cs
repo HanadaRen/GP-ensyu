@@ -50,7 +50,7 @@ namespace Gp_app
             this.returnButton.Location = new System.Drawing.Point(10, 341);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(121, 32);
-            this.returnButton.TabIndex = 2;
+            this.returnButton.TabIndex = 6;
             this.returnButton.Text = "戻る";
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.ReturnButtonClick);
@@ -61,7 +61,7 @@ namespace Gp_app
             this.searchButton.Location = new System.Drawing.Point(368, 205);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(76, 24);
-            this.searchButton.TabIndex = 3;
+            this.searchButton.TabIndex = 1;
             this.searchButton.Text = "検索";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.SearchButtonClick);
@@ -74,7 +74,7 @@ namespace Gp_app
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(479, 177);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 10;
             // 
             // textBox1
             // 
@@ -119,7 +119,7 @@ namespace Gp_app
             this.fixButton.Location = new System.Drawing.Point(368, 249);
             this.fixButton.Name = "fixButton";
             this.fixButton.Size = new System.Drawing.Size(76, 62);
-            this.fixButton.TabIndex = 50;
+            this.fixButton.TabIndex = 4;
             this.fixButton.Text = "変更";
             this.fixButton.UseVisualStyleBackColor = true;
             this.fixButton.Click += new System.EventHandler(this.FixButtonClick);
@@ -129,14 +129,14 @@ namespace Gp_app
             this.textBox2.Location = new System.Drawing.Point(172, 249);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 22);
-            this.textBox2.TabIndex = 51;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(172, 289);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(190, 22);
-            this.textBox3.TabIndex = 52;
+            this.textBox3.TabIndex = 3;
             // 
             // deleteButton
             // 
@@ -145,7 +145,7 @@ namespace Gp_app
             this.deleteButton.Location = new System.Drawing.Point(143, 341);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(346, 32);
-            this.deleteButton.TabIndex = 54;
+            this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "データを削除する";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.DeleteButtonClick);

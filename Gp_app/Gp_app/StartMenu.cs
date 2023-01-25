@@ -27,19 +27,31 @@ namespace Gp_app
             }
         }
 
+        /// <summary>
+        /// ログインボタン
+        /// </summary>
         private void LoginButton_Click(object sender, EventArgs e)
         {
             Login login = new Login();
 
+            //ログイン画面を表示
             login.Show();
 
+            //スタートメニューを非表示
             this.Visible = false;
         }
 
+        /// <summary>
+        /// アカウント登録ボタン
+        /// </summary>
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            //スタートメニューを非表示
+            this.Visible = false;
+
             RegisterMenu registerMenu = new RegisterMenu();
 
+            //アカウント登録画面を表示
             registerMenu.Show();
         }
     }

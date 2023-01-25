@@ -32,7 +32,6 @@ namespace Gp_app
             this.Creation_account_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
             this.Exit_button = new System.Windows.Forms.Button();
-            this.DB_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Creation_account_button
@@ -61,36 +60,24 @@ namespace Gp_app
             // 
             this.Exit_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Exit_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Exit_button.Location = new System.Drawing.Point(185, 104);
+            this.Exit_button.Location = new System.Drawing.Point(94, 104);
             this.Exit_button.Name = "Exit_button";
             this.Exit_button.Size = new System.Drawing.Size(167, 66);
             this.Exit_button.TabIndex = 5;
-            this.Exit_button.Text = "終了";
+            this.Exit_button.Text = "ログアウト";
             this.Exit_button.UseVisualStyleBackColor = true;
             this.Exit_button.Click += new System.EventHandler(this.ExitButtonClick);
             // 
-            // DB_button
-            // 
-            this.DB_button.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.DB_button.Location = new System.Drawing.Point(12, 104);
-            this.DB_button.Name = "DB_button";
-            this.DB_button.Size = new System.Drawing.Size(167, 66);
-            this.DB_button.TabIndex = 4;
-            this.DB_button.Text = "DB画面";
-            this.DB_button.UseVisualStyleBackColor = true;
-            this.DB_button.Click += new System.EventHandler(this.DbButtonClick);
-            // 
-            // main_menu
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Exit_button;
             this.ClientSize = new System.Drawing.Size(364, 182);
-            this.Controls.Add(this.DB_button);
             this.Controls.Add(this.Exit_button);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Creation_account_button);
-            this.Name = "main_menu";
+            this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "メインメニュー";
             this.ResumeLayout(false);
@@ -102,7 +89,6 @@ namespace Gp_app
         private System.Windows.Forms.Button Creation_account_button;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button Exit_button;
-        private System.Windows.Forms.Button DB_button;
     }
 }
 

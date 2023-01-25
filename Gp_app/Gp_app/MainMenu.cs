@@ -32,13 +32,13 @@ namespace Gp_app
         private void ExitButtonClick(object sender, EventArgs e)
         {
             //ダイアログの選択結果をresultに入れる
-            DialogResult result = MessageBox.Show("本当に終了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("本当にログアウトしますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            //ダイアログでYesを入力したら
-            if (result == DialogResult.Yes)
+            if(result == DialogResult.Yes)
             {
-                //アプリケーションの終了
-                Application.Exit();
+                StartMenu startMenu = new StartMenu();
+                startMenu.Show();
+                this.Close();
             }
         }
 
@@ -60,7 +60,7 @@ namespace Gp_app
         /// <summary>
         /// DB画面ボタン
         /// </summary>
-        private void DbButtonClick(object sender, EventArgs e)
+        /*private void DbButtonClick(object sender, EventArgs e)
         {
             //画面非表示
             this.Visible = false;
@@ -70,6 +70,6 @@ namespace Gp_app
 
             //Form1を呼び出す
             form1.Show();
-        }
+        }*/
     }
 }

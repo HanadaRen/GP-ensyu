@@ -54,5 +54,19 @@ namespace Gp_app
             //アカウント登録画面を表示
             registerMenu.Show();
         }
+
+        /// <summary>
+        /// アカウント削除ボタン
+        /// </summary>
+        /*private void AccountDeleteButton_Click(object sender, EventArgs e)
+        {
+            AccoutDeleteMenu accountsDeleteMenu = new AccoutDeleteMenu();
+
+            //アカウント削除画面を表示
+            accountsDeleteMenu.Show();
+
+            //スタートメニューを非表示
+            this.Visible = false;
+        }*/
     }
 }

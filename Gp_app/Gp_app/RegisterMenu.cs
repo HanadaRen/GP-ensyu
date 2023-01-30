@@ -50,7 +50,7 @@ namespace Gp_app
             else
             {
                 //accounts.csvをstreamReaderに入れる
-                StreamWriter streamWriter = new StreamWriter(@"K:\科目\10_GP演習\最終提出物フォルダ\システム\G2A130花田琉\Gp_app\" + "accounts.csv",true);
+                StreamWriter streamWriter = new StreamWriter("Accounts/accounts.csv",true);
 
                 //NewInformationにテキストボックスの中身を入れる
                 string NewInformation = UserNameBox.Text + "," + PasswordBox.Text;
@@ -75,6 +75,14 @@ namespace Gp_app
                 this.Close();
 
             }
+        }
+
+        private void ChangeButton_Click(object sender, EventArgs e)
+        {
+            //パスワードの表示非表示切り替え
+            PasswordBox.UseSystemPasswordChar = !PasswordBox.UseSystemPasswordChar;
+
+            VerificationBox.UseSystemPasswordChar = !VerificationBox.UseSystemPasswordChar;
         }
     }
 }

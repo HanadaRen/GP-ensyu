@@ -41,7 +41,7 @@ namespace Gp_app
             // LoginButtton
             // 
             this.LoginButtton.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.LoginButtton.Location = new System.Drawing.Point(312, 123);
+            this.LoginButtton.Location = new System.Drawing.Point(336, 123);
             this.LoginButtton.Name = "LoginButtton";
             this.LoginButtton.Size = new System.Drawing.Size(125, 38);
             this.LoginButtton.TabIndex = 4;
@@ -62,7 +62,7 @@ namespace Gp_app
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(160, 70);
-            this.PasswordBox.MaxLength = 4;
+            this.PasswordBox.MaxLength = 50;
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(185, 22);
             this.PasswordBox.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace Gp_app
             // EndButton
             // 
             this.EndButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.EndButton.Location = new System.Drawing.Point(161, 123);
+            this.EndButton.Location = new System.Drawing.Point(193, 123);
             this.EndButton.Name = "EndButton";
             this.EndButton.Size = new System.Drawing.Size(125, 38);
             this.EndButton.TabIndex = 5;
@@ -84,7 +84,7 @@ namespace Gp_app
             this.ChangeButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ChangeButton.Location = new System.Drawing.Point(351, 62);
             this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(85, 32);
+            this.ChangeButton.Size = new System.Drawing.Size(110, 32);
             this.ChangeButton.TabIndex = 3;
             this.ChangeButton.Text = "表示切替";
             this.ChangeButton.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@ namespace Gp_app
             // UserNameBox
             // 
             this.UserNameBox.Location = new System.Drawing.Point(161, 23);
-            this.UserNameBox.MaxLength = 20;
+            this.UserNameBox.MaxLength = 50;
             this.UserNameBox.Name = "UserNameBox";
             this.UserNameBox.Size = new System.Drawing.Size(185, 22);
             this.UserNameBox.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace Gp_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 173);
+            this.ClientSize = new System.Drawing.Size(475, 173);
             this.Controls.Add(this.UserNameBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ChangeButton);

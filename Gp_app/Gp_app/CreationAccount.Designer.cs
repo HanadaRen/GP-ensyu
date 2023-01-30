@@ -71,6 +71,7 @@ namespace Gp_app
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 22);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -98,6 +99,7 @@ namespace Gp_app
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -175,6 +177,7 @@ namespace Gp_app
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -182,6 +185,7 @@ namespace Gp_app
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 22);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // comboBox1
             // 
@@ -197,6 +201,7 @@ namespace Gp_app
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 23);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -210,6 +215,7 @@ namespace Gp_app
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 23);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -221,6 +227,7 @@ namespace Gp_app
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 23);
             this.comboBox3.TabIndex = 6;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -236,6 +243,7 @@ namespace Gp_app
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(229, 23);
             this.comboBox4.TabIndex = 8;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // Register_button
             // 
@@ -265,6 +273,7 @@ namespace Gp_app
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(229, 23);
             this.comboBox5.TabIndex = 3;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // panel1
             // 

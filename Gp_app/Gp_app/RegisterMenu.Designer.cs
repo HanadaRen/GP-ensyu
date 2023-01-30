@@ -37,6 +37,7 @@ namespace Gp_app
             this.VerificationBox = new System.Windows.Forms.TextBox();
             this.RegistButton = new System.Windows.Forms.Button();
             this.ReturnButton = new System.Windows.Forms.Button();
+            this.ChangeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +73,7 @@ namespace Gp_app
             // UserNameBox
             // 
             this.UserNameBox.Location = new System.Drawing.Point(178, 9);
+            this.UserNameBox.MaxLength = 50;
             this.UserNameBox.Name = "UserNameBox";
             this.UserNameBox.Size = new System.Drawing.Size(183, 22);
             this.UserNameBox.TabIndex = 1;
@@ -79,22 +81,27 @@ namespace Gp_app
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(178, 46);
+            this.PasswordBox.MaxLength = 50;
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(183, 22);
             this.PasswordBox.TabIndex = 2;
+            this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // VerificationBox
             // 
             this.VerificationBox.Location = new System.Drawing.Point(178, 83);
+            this.VerificationBox.MaxLength = 50;
             this.VerificationBox.Name = "VerificationBox";
             this.VerificationBox.Size = new System.Drawing.Size(183, 22);
             this.VerificationBox.TabIndex = 3;
+            this.VerificationBox.UseSystemPasswordChar = true;
             // 
             // RegistButton
             // 
-            this.RegistButton.Location = new System.Drawing.Point(286, 127);
+            this.RegistButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.RegistButton.Location = new System.Drawing.Point(367, 127);
             this.RegistButton.Name = "RegistButton";
-            this.RegistButton.Size = new System.Drawing.Size(75, 23);
+            this.RegistButton.Size = new System.Drawing.Size(75, 36);
             this.RegistButton.TabIndex = 6;
             this.RegistButton.Text = "登録";
             this.RegistButton.UseVisualStyleBackColor = true;
@@ -102,19 +109,32 @@ namespace Gp_app
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(16, 127);
+            this.ReturnButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ReturnButton.Location = new System.Drawing.Point(275, 127);
             this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.ReturnButton.Size = new System.Drawing.Size(75, 36);
             this.ReturnButton.TabIndex = 7;
             this.ReturnButton.Text = "戻る";
             this.ReturnButton.UseVisualStyleBackColor = true;
             this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
+            // ChangeButton
+            // 
+            this.ChangeButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.ChangeButton.Location = new System.Drawing.Point(367, 61);
+            this.ChangeButton.Name = "ChangeButton";
+            this.ChangeButton.Size = new System.Drawing.Size(75, 29);
+            this.ChangeButton.TabIndex = 8;
+            this.ChangeButton.Text = "表示切替";
+            this.ChangeButton.UseVisualStyleBackColor = true;
+            this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
+            // 
             // RegisterMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 166);
+            this.ClientSize = new System.Drawing.Size(446, 166);
+            this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.RegistButton);
             this.Controls.Add(this.VerificationBox);
@@ -141,5 +161,6 @@ namespace Gp_app
         private System.Windows.Forms.TextBox VerificationBox;
         private System.Windows.Forms.Button RegistButton;
         private System.Windows.Forms.Button ReturnButton;
+        private System.Windows.Forms.Button ChangeButton;
     }
 }

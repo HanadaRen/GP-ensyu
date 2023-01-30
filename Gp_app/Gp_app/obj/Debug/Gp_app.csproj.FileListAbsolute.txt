@@ -1,7 +1,6 @@
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\Gp_app.exe.config
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\Gp_app.exe
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\bin\Debug\Gp_app.pdb
-C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.csproj.AssemblyReference.cache
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.Properties.Resources.resources
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.csproj.GenerateResource.cache
 C:\Users\s20217037\Desktop\花田の設計書テンプレート\Gp-ensyu\Gp_app\Gp_app\obj\Debug\Gp_app.csproj.CoreCompileInputs.cache

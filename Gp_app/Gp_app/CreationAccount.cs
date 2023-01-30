@@ -61,11 +61,6 @@ namespace Gp_app
                     //空白の数をカウント
                     Space++;
                 }
-                else
-                {
-                    //背景を白にする
-                    i.BackColor = Color.White;
-                }
             }
 
             //コンボボックスを全部確認
@@ -79,15 +74,10 @@ namespace Gp_app
                     //空白の数をカウント
                     Space++;
                 }
-                else
-                {
-                    //背景を白にする
-                    i.BackColor = Color.White;
-                }
             }
 
             //空白がなかったら
-            if(Space == 0)
+            if (Space == 0)
             {
                 //ダイアログの選択結果をresultに入れる
                 DialogResult result = MessageBox.Show("このデータで登録を完了しますか？", "確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -155,6 +145,51 @@ namespace Gp_app
                 //空白の数をリセット
                 Space = 0;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.White;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox5.BackColor = Color.White;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.BackColor = Color.White;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.BackColor = Color.White;
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox3.BackColor = Color.White;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            textBox4.BackColor = Color.White;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox4.BackColor = Color.White;
         }
     }
 }

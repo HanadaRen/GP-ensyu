@@ -37,9 +37,9 @@ namespace Gp_app
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LoginButton.Location = new System.Drawing.Point(21, 21);
+            this.LoginButton.Location = new System.Drawing.Point(5, 12);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(151, 33);
+            this.LoginButton.Size = new System.Drawing.Size(170, 33);
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "ログイン";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@ namespace Gp_app
             // RegisterButton
             // 
             this.RegisterButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.RegisterButton.Location = new System.Drawing.Point(178, 21);
+            this.RegisterButton.Location = new System.Drawing.Point(181, 12);
             this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(151, 33);
+            this.RegisterButton.Size = new System.Drawing.Size(170, 33);
             this.RegisterButton.TabIndex = 1;
             this.RegisterButton.Text = "アカウント登録";
             this.RegisterButton.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@ namespace Gp_app
             // EnterButton
             // 
             this.EnterButton.Font = new System.Drawing.Font("MS UI Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.EnterButton.Location = new System.Drawing.Point(99, 66);
+            this.EnterButton.Location = new System.Drawing.Point(96, 51);
             this.EnterButton.Name = "EnterButton";
-            this.EnterButton.Size = new System.Drawing.Size(151, 33);
-            this.EnterButton.TabIndex = 2;
+            this.EnterButton.Size = new System.Drawing.Size(170, 33);
+            this.EnterButton.TabIndex = 3;
             this.EnterButton.Text = "終了";
             this.EnterButton.UseVisualStyleBackColor = true;
             this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
@@ -71,7 +71,7 @@ namespace Gp_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 111);
+            this.ClientSize = new System.Drawing.Size(357, 94);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.LoginButton);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 
 namespace Gp_app
 {
@@ -32,7 +33,7 @@ namespace Gp_app
                 bool fault = false;
 
                 //accounts.csvをstreamReaderに入れる
-                StreamReader streamReader = new StreamReader(@"K:\科目\10_GP演習\最終提出物フォルダ\システム\G2A130花田琉\Gp_app\" + "accounts.csv");
+                StreamReader streamReader = new StreamReader("Accounts/accounts.csv");
               
                 //accounts.csvを上から下まで確認する
                 while (streamReader.Peek() > -1)
@@ -70,6 +71,10 @@ namespace Gp_app
                     //メインメニュを開いてログイン画面を閉じる
                     if (MainMenu == null || MainMenu.IsDisposed)
                     {
+                        MessageBox.Show("ようこそ", "",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
                         MainMenu mainMenu = new MainMenu();
                         mainMenu.Show();
                     }
